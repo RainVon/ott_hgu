@@ -43,7 +43,7 @@ public class Main {
                                         jPanelFrame.jtp.append("已选择机顶盒镜像：" + file1 + "\n", 2);
                                         jPanelFrame.jtp.paintImmediately( jPanelFrame.jtp.getBounds());
                                     }
-                                    else if (file.getName().contains(".bin")) {
+                                    else if (file.getName().contains(".bin") || file.getName().contains(".img")) {
                                         file2 = file.getAbsolutePath();
                                         filename = file.getName();
                                         System.out.println("file2 = " + file2);
@@ -105,7 +105,7 @@ public class Main {
                     file2=fd.getDirectory() +fd.getFile();
                     filename=fd.getFile();
                     System.out.println("file2 = " + file2);
-                    if (fd.getFile().toString().contains(".bin")) {
+                    if (fd.getFile().toString().contains(".bin") || fd.getFile().toString().contains(".img")) {
                         jPanelFrame.jtp.append("已选择网关镜像：" + file2 + "\n", 2);
                         jPanelFrame.jtp.paintImmediately( jPanelFrame.jtp.getBounds());
                     }
